@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -qy git curl libmcrypt-dev default-mysql-c
 # Configure and install the extension
 # RUN docker-php-ext-enable mcrypt
 # RUN docker-php-ext-install pdo_mysql
-# RUN docker-php-ext-install exif
+RUN docker-php-ext-install exif
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
